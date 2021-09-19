@@ -7,6 +7,8 @@ ai_chose = random.choice(rps_list)
 ai_score = 0
 your_score = 0
 
+
+# main rock paper scissors loop
 def rps():
     global your_score
     global ai_score
@@ -40,10 +42,14 @@ def rps():
 
 rps()
 
+
+# asking if you want to continue
 def ask_cont():
     global rq_cont
-    rq_cont = input("Do you want to continue? Y/N: ")
+    rq_cont = input("Do you want to continue? Y/N: ").upper()
 
+
+# if your answer is yes, it continues. If your answer is no, it gives you the current score and stops
 while True:
     ask_cont()
     if rq_cont == "Y":
