@@ -1,4 +1,5 @@
 # The code won't work because the token (line 12) is secret. Change this to your own token.
+# You also need to use this code on repl.it for it to work.
 
 from keep_alive import keep_alive
 import os
