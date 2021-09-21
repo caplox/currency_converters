@@ -20,57 +20,56 @@ def button_click(rps):
     global you_score
     output_field.delete(0, END)
     you_chose = rps
-    while True:
-        ai_chose = choice(rps_list)
-        if you_chose == ai_chose:
-            output_field.delete(0, END)
-            output_field.insert(0, "It's a draw! You both chose " + you_chose + "!")
-            ai_score += .5
-            you_score += .5
-            you_score_field.delete(0, END)
-            ai_score_field.delete(0, END)
-            you_score_field.insert(0, you_score)
-            ai_score_field.insert(0, ai_score)
-        elif you_chose == "rock" and ai_chose == "paper":
-            output_field.delete(0, END)
-            output_field.insert(0, "The AI won! You chose " + you_chose + " and the AI chose paper!")
-            ai_score += 1
-            ai_score_field.delete(0, END)
-            ai_score_field.insert(0, ai_score)
-        elif you_chose == "scissors" and ai_chose == "rock":
-            output_field.delete(0, END)
-            output_field.insert(0, "The AI won! You chose " + you_chose + " and the AI chose rock!")
-            ai_score += 1
-            ai_score_field.delete(0, END)
-            ai_score_field.insert(0, ai_score)
-        elif you_chose == "paper" and ai_chose == "scissors":
-            output_field.delete(0, END)
-            output_field.insert(0, "The AI won! You chose " + you_chose + " and the AI chose scissors!")
-            you_score += 1
-            ai_score_field.delete(0, END)
-            ai_score_field.insert(0, ai_score)
-        elif you_chose == "paper" and ai_chose == "rock":
-            you_score += 1
-            output_field.delete(0, END)
-            output_field.insert(0, "You won! You chose " + you_chose + " and the AI chose rock!")
-            you_score_field.delete(0, END)
-            you_score_field.insert(0, you_score)
-        elif you_chose == "rock" and ai_chose == "scissors":
-            you_score += 1
-            output_field.delete(0, END)
-            output_field.insert(0, "You won! You chose " + you_chose + " and the AI chose scissors!")
-            you_score_field.delete(0, END)
-            you_score_field.insert(0, you_score)
-        elif you_chose == "scissors" and ai_chose == "paper":
-            you_score += 1
-            output_field.delete(0, END)
-            output_field.insert(0, "You won! You chose " + you_chose + " and the AI chose paper!")
-            you_score_field.delete(0, END)
-            you_score_field.insert(0, you_score)
-        else:
-            output_field.delete(0, END)
-            output_field.insert(0, "ERROR BLYAT " + you_chose + ' ' + ai_chose)
-        break
+    ai_chose = choice(rps_list)
+    if you_chose == ai_chose:
+        output_field.delete(0, END)
+        output_field.insert(0, "It's a draw! You both chose " + you_chose + "!")
+        ai_score += .5
+        you_score += .5
+        you_score_field.delete(0, END)
+        ai_score_field.delete(0, END)
+        you_score_field.insert(0, you_score)
+        ai_score_field.insert(0, ai_score)
+    elif you_chose == "rock" and ai_chose == "paper":
+        output_field.delete(0, END)
+        output_field.insert(0, "The AI won! You chose " + you_chose + " and the AI chose paper!")
+        ai_score += 1
+        ai_score_field.delete(0, END)
+        ai_score_field.insert(0, ai_score)
+    elif you_chose == "scissors" and ai_chose == "rock":
+        output_field.delete(0, END)
+        output_field.insert(0, "The AI won! You chose " + you_chose + " and the AI chose rock!")
+        ai_score += 1
+        ai_score_field.delete(0, END)
+        ai_score_field.insert(0, ai_score)
+    elif you_chose == "paper" and ai_chose == "scissors":
+        output_field.delete(0, END)
+        output_field.insert(0, "The AI won! You chose " + you_chose + " and the AI chose scissors!")
+        you_score += 1
+        ai_score_field.delete(0, END)
+        ai_score_field.insert(0, ai_score)
+    elif you_chose == "paper" and ai_chose == "rock":
+        you_score += 1
+        output_field.delete(0, END)
+        output_field.insert(0, "You won! You chose " + you_chose + " and the AI chose rock!")
+        you_score_field.delete(0, END)
+        you_score_field.insert(0, you_score)
+    elif you_chose == "rock" and ai_chose == "scissors":
+        you_score += 1
+        output_field.delete(0, END)
+        output_field.insert(0, "You won! You chose " + you_chose + " and the AI chose scissors!")
+        you_score_field.delete(0, END)
+        you_score_field.insert(0, you_score)
+    elif you_chose == "scissors" and ai_chose == "paper":
+        you_score += 1
+        output_field.delete(0, END)
+        output_field.insert(0, "You won! You chose " + you_chose + " and the AI chose paper!")
+        you_score_field.delete(0, END)
+        you_score_field.insert(0, you_score)
+    else:
+        output_field.delete(0, END)
+        output_field.insert(0, "ERROR BLYAT " + you_chose + ' ' + ai_chose)
+
 
 
 # Buttons and Entry
