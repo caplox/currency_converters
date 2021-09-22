@@ -1,5 +1,3 @@
-# Next step: Add score(board)
-
 from random import choice
 from tkinter import Tk, END, Button, Entry, W, E
 
