@@ -22,8 +22,8 @@ def button_click(rps):
     if you_chose == ai_chose:
         output_field.delete(0, END)
         output_field.insert(0, "It's a draw! You both chose " + you_chose + "!")
-        ai_score += .5
-        you_score += .5
+        ai_score += 0.5
+        you_score += 0.5
         you_score_field.delete(0, END)
         ai_score_field.delete(0, END)
         you_score_field.insert(0, you_score)
@@ -43,7 +43,7 @@ def button_click(rps):
     elif you_chose == "paper" and ai_chose == "scissors":
         output_field.delete(0, END)
         output_field.insert(0, "The AI won! You chose " + you_chose + " and the AI chose scissors!")
-        you_score += 1
+        ai_score += 1
         ai_score_field.delete(0, END)
         ai_score_field.insert(0, ai_score)
     elif you_chose == "paper" and ai_chose == "rock":
@@ -67,7 +67,6 @@ def button_click(rps):
     else:
         output_field.delete(0, END)
         output_field.insert(0, "ERROR BLYAT " + you_chose + ' ' + ai_chose)
-
 
 
 # Buttons and Entry
