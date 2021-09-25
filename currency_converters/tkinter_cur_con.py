@@ -1,7 +1,6 @@
-# import modules might have a different directory.
-from tkinter import *
-from Projects.Other.Finished import btc
-import Projects.currency_con.currency_req.cur_rq_v2 as currq
+from tkinter import Entry, Tk, END, Button
+from Python.Projects.zzzOther.Finished import btc
+import Python.Projects.currency_con.currency_req.cur_rq_v2 as currq
 
 root = Tk()
 root.title("Currency Converter")
@@ -28,11 +27,15 @@ e2.insert(0, "Enter your desired amount")
 # functions. Make the buttons work
 def button_click(cur):
     global conv
-    current = e.get()
-    e.delete(0, END)
-    e.insert(0, cur)
-    cur1 = float(cur)
-    conv = float(current) / cur1
+    if e.get() != '':
+        current = e.get()
+        e.delete(0, END)
+        e.insert(0, cur)
+        cur = float(cur)
+        conv = float(current) / cur
+    elif e.get() == '':
+        e.delete(0, END)
+        e.insert(0, cur)
 
 
 def button_clear():
